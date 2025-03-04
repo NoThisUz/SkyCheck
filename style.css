@@ -1,0 +1,411 @@
+/* 📌 Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+/* 📌 Контейнер погоды */
+.weather-container {
+    max-width: 420px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-container:hover {
+    transform: scale(1.02);
+}
+
+/* 📌 Поисковая строка */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: #222;
+    color: #fff;
+}
+
+button {
+    margin-left: 10px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #000;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: scale(1.05);
+}
+
+/* 📌 Информация о погоде */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather-info img {
+    width: 120px;
+    height: auto;
+    margin: 10px auto;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* 📌 Светлая тема */
+.light-theme {
+    background: linear-gradient(135deg, #ffffff, #f3f3f3);
+    color: #000;
+}
+
+.light-theme .weather-container {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.light-theme input {
+    background: #ddd;
+    color: #000;
+}
+
+.light-theme button {
+    background: #ff9800;
+    color: #000;
+}
+
+/* 📌 Кнопка переключения темы */
+#theme-toggle {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #000;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: scale(1.1);
+}
+
+/* 📌 Стили для прогноза */
+.forecast-container {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.forecast-item {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    width: 85px;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forecast-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* 📌 График */
+#temperatureChart {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* 📌 Избранные города */
+.favorites-container {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+.favorites-container h3 {
+    margin-bottom: 10px;
+}
+
+#favorites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.favorite-item {
+    background: #f39c12;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.favorite-item:hover {
+    background: #e67e22;
+}
+
+/* 📌 Кнопка "Добавить в избранное" */
+#add-favorite {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f1c40f, #f39c12);
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#add-favorite:hover {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+/* 📌 Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .weather-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .forecast {
+        max-width: 100%;
+        gap: 8px;
+    }
+
+    .forecast-item {
+        width: 70px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #theme-toggle {
+        left: 10px;
+        top: 10px;
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    #add-favorite {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-container img {
+    width: 100px;  /* Ограничиваем размер логотипа */
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 400px; /* Ограничиваем ширину */
+    height: 250px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#temperatureChart {
+    width: 100% !important;
+    height: 250px !important;
+}
+
+/* Светлая тема для прогноза */
+.light-theme .forecast-item {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* Светлая тема для кнопок */
+.light-theme button {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #000;
+    border: none;
+}
+
+.light-theme button:hover {
+    background: linear-gradient(135deg, #ff9900, #ff7700);
+}
+
+.light-theme .weather-container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.light-theme input {
+    background: #eee;
+    color: #000;
+}
+
+.light-theme button {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #000;
+    border: none;
+}
+
+.light-theme button:hover {
+    background: linear-gradient(135deg, #ff9900, #ff7700);
+}
+
+.favorite-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Отступ между кнопками */
+    margin-top: 12px;
+}
+
+.favorite-buttons button {
+    width: 100%;
+    max-width: 250px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🌑 Тёмная тема */
+.favorite-buttons button {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #000;
+}
+
+.favorite-buttons button:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: scale(1.05);
+}
+
+/* 🌞 Светлая тема */
+.light-theme .favorite-buttons button {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #000;
+}
+
+.light-theme .favorite-buttons button:hover {
+    background: linear-gradient(135deg, #ff9900, #ff7700);
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-icon {
+    display: block;
+    margin: 0 auto;
+    width: 80px; 
+    height: auto;
+}
+
+
+
+
+
+

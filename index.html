@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCheck – точный прогноз в один клик</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle">🌙</button> <!-- Переключатель темы -->
+    
+    <div class="main-container">
+        <div class="weather-container">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="logo.png">
+            </div>
+            <h2>SkyCheck – точный прогноз в один клик</h2>
+            <div class="search">
+                <input type="text" id="search-box" placeholder="Введите название города">
+                <button id="search-btn">🔍</button>
+                <button id="geo-btn">📍</button> <!-- Теперь кнопка компактная -->
+            </div>            
+
+            <div class="error" style="display: none; color: red;">
+                Город не найден!
+            </div>
+
+            <div class="weather" style="display: none;">
+                <h2 id="city-name">—</h2>
+                <img id="weather-icon" src="" alt="Иконка погоды">
+                <p id="temperature">—°C</p>
+                <p id="feels-like">Ощущается как: —°C</p>
+                <p id="description">—</p>
+                <p id="details">Ветер: — м/с | Влажность: —%</p>
+            </div>
+
+            <div class="favorite-buttons">
+                <button id="add-favorite">⭐ Добавить в избранное</button>
+                <button id="view-favorites">📌 Избранные города</button>
+            </div>            
+                  
+        <div class="forecast-container">
+            <h3>Прогноз на 5 дней</h3>
+            <div class="forecast"></div>
+            <div class="chart-container">
+                <canvas id="temperatureChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
